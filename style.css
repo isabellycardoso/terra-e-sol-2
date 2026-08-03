@@ -1,0 +1,220 @@
+/* Configurações Gerais */
+:root {
+  --bg-dark: #121814;
+  --bg-card: #1a231d;
+  --primary-green: #2ecc71;
+  --solar-yellow: #f1620f;
+  --text-light: #23a51e;
+  --text-muted: #a0aab2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+}
+
+header h1 span {
+  color: var(--solar-yellow);
+}
+
+.subtitle {
+  color: var(--primary-green);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
+
+/* Caixa da Calculadora */
+.calc-box {
+  background-color: var(--bg-card);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #25332a;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  margin-bottom: 30px;
+}
+
+.calc-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.calc-box p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  background-color: #0f1411;
+  border: 1px solid #2d3f34;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.input-group input:focus {
+  border-color: var(--primary-green);
+  outline: none;
+  box-shadow: 0 0 10px rgba(46, 204, 113, 0.2);
+}
+
+/* Botão */
+button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, var(--primary-green), #27ae60);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Dashboard de Resultados */
+.dashboard {
+  background-color: var(--bg-card);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #2d3f34;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.dashboard h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--solar-yellow);
+}
+
+.grid-resultados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.card {
+  background-color: #121814;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  border-bottom: 4px solid var(--primary-green);
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.resultado-valor {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.card-detalhe {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Selo de Conquista */
+.selo-sustentavel {
+  display: flex;
+  align-items: center;
+  background-color: #1e2922;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px dashed var(--solar-yellow);
+  gap: 15px;
+}
+
+.selo-icon {
+  font-size: 2.5rem;
+}
+
+.selo-sustentavel h4 {
+  color: var(--solar-yellow);
+  margin-bottom: 3px;
+}
+
+.selo-sustentavel p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Classes utilitárias */
+.hidden {
+  display: none !important;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Animação de Surgimento */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

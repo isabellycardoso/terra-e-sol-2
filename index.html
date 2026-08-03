@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terra e Sol - Calculadora de Futuro Sustentável</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Terra<span>e Sol</span></h1>
+      <p class="subtitle">Agro é mais</p>
+    </header>
+
+    <main class="calc-box">
+      <h2>Simulador</h2>
+      <p>Descubra o potencial econômico e ecológico da sua propriedade.</p>
+
+      <div class="input-group">
+        <label for="conta-energia">Gasto mensal com energia elétrica (R$):</label>
+        <input type="number" id="conta-energia" placeholder="Ex: 1500" min="0">
+      </div>
+
+      <div class="input-group">
+        <label for="consumo-diesel">Uso mensal de diesel em geradores (Litros):</label>
+        <input type="number" id="consumo-diesel" placeholder="Ex: 200 (Opcional)" min="0">
+      </div>
+
+      <button id="btn-calcular" onclick="calcularEnergiaSolar()">Simular Fazenda Solar</button>
+    </main>
+
+    <section id="dashboard-solar" class="dashboard hidden">
+      <h2>Seu Impacto Agrosolar</h2>
+      
+      <div class="grid-resultados">
+        <div class="card">
+          <div class="card-icon">💰</div>
+          <h3>Economia Anual</h3>
+          <p id="economia-anual" class="resultado-valor">R$ 0,00</p>
+          <span class="card-detalhe">Redução de até 95% na conta de luz</span>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🌱</div>
+          <h3>CO2 Evitado</h3>
+          <p id="co2-evitado" class="resultado-valor">0 Tons</p>
+          <span class="card-detalhe">Gases poluentes a menos por ano</span>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🌳</div>
+          <h3>Árvores Salvas</h3>
+          <p id="arvores-salvas" class="resultado-valor">0 Árvores</p>
+          <span class="card-detalhe">Equivalência em plantio anual</span>
+        </div>
+      </div>
+
+      <div class="selo-sustentavel">
+        <div class="selo-icon">🏆</div>
+        <div>
+          <h4>Selo Propriedade Eco-Eficiente Garantido!</h4>
+          <p>Esta simulação prova que a tecnologia e a sustentabilidade andam juntas para um agro mais forte.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; Juntos somos + </p>
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
